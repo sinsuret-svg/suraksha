@@ -113,6 +113,7 @@
     </div>
 
 </div>
+</header>
 <section class="hero" id="home">
 
 <div class="hero-left">
@@ -667,6 +668,31 @@ document.querySelectorAll(".insurance-item").forEach(card => {
         section.classList.toggle("active");
 
     });
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const header = document.querySelector("header");
+
+    if (!header) return;
+
+    function updateHeaderHeight() {
+        document.documentElement.style.setProperty(
+            "--header-height",
+            header.offsetHeight + "px"
+        );
+    }
+
+    updateHeaderHeight();
+
+    window.addEventListener("resize", updateHeaderHeight);
+
+    if ("ResizeObserver" in window) {
+        new ResizeObserver(updateHeaderHeight).observe(header);
+    }
 
 });
 </script>
