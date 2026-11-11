@@ -2009,33 +2009,57 @@ header nav ul {
    SMALL MOBILE
 ========================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
 
     header .container.nav {
-        gap: 5px;
-        padding-left: 7px;
-        padding-right: 7px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px;
+        padding: 8px 5px;
+    }
+
+    header .logo {
+        width: 100%;
+        justify-content: center;
     }
 
     header .logo img {
-        max-width: 78px;
-        max-height: 42px;
+        max-width: 150px;
+        max-height: 48px;
+        object-fit: contain;
+    }
+
+    header nav {
+        width: 100%;
+        overflow: visible;
     }
 
     header nav ul {
-        gap: 8px;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center;
+        gap: 8px 12px;
+        width: 100%;
+        overflow: visible !important;
+        padding: 4px;
+    }
+
+    header nav ul li {
+        flex: 0 0 auto;
     }
 
     header nav ul li a {
-        font-size: 11px;
+        font-size: 12px;
+        white-space: nowrap;
     }
 
     header nav .btn {
-        padding: 6px 7px;
-    }
-
-    .insurance-quick-links {
-        gap: 12px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
     }
 }
 
@@ -2044,59 +2068,60 @@ header nav ul {
    EACH ITEM CONTENT STACKED VERTICALLY
 ========================================= */
 
+/* =========================================
+   INSURANCE ROW - FOUR ITEMS
+========================================= */
+
 .insurance-quick-links {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    justify-content: space-around !important;
+    justify-content: center !important;
     align-items: flex-start !important;
-    gap: 12px;
+    gap: 15px;
     width: 100%;
-    padding: 12px 8px;
+    padding: 8px 10px;
     box-sizing: border-box;
     overflow-x: auto;
 }
 
-/* Each insurance category */
 .insurance-quick-links .insurance-section {
     display: flex !important;
     flex-direction: column !important;
-    flex-wrap: nowrap !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    gap: 5px !important;
-    width: auto !important;
-    min-width: 0 !important;
-    flex: 1 1 0 !important;
+    gap: 5px;
+    width: 70px !important;
+    min-width: 70px !important;
+    flex: 0 0 70px !important;
     text-align: center;
 }
 
-/* Icon on first line */
 .insurance-quick-links .insurance-item {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100%;
+    width: 55px !important;
+    height: 55px !important;
+    min-width: 55px !important;
+    flex: 0 0 55px !important;
 }
 
-/* Name below icon */
 .insurance-quick-links .insurance-name {
-    display: block !important;
+    display: block;
     width: 100%;
-    text-align: center !important;
-    white-space: normal !important;
-    line-height: 1.3;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 11px;
 }
 
-/* Plans and Quote below name */
 .insurance-quick-links .insurance-actions {
-    display: flex !important;
+    display: none;
     flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 6px !important;
+    justify-content: center;
+    gap: 5px;
     width: 100%;
-    white-space: nowrap;
+}
+
+.insurance-quick-links .insurance-section.active .insurance-actions {
+    display: flex;
 }
 
 /* Mobile */
