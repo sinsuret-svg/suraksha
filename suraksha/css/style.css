@@ -1831,32 +1831,34 @@ header {
     position: fixed !important;
     top: 0;
     left: 0;
-    right: 0;
     width: 100%;
-    z-index: 99999;
-    background: #fff;
+    padding: 3px 0 !important;
+    z-index: 1000;
 }
 
 header .container.nav {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    width: 100%;
-    box-sizing: border-box;
+    min-height: 55px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    align-items: center !important;
 }
+
+header .logo img {
+    max-height: 40px !important;
+    width: auto;
+    object-fit: contain;
+}
+
+header nav ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 12px !important;
+}
+
 
 header .logo {
     flex: 0 0 auto;
     min-width: 0;
-}
-
-header .logo img {
-    display: block;
-    max-width: 190px;
-    height: auto;
 }
 
 header nav {
@@ -1864,17 +1866,6 @@ header nav {
     min-width: 0;
 }
 
-header nav ul {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 
 /* =========================================
    INSURANCE LINKS - NOT FIXED
@@ -1928,83 +1919,25 @@ header nav ul {
 /* =========================================
    MOBILE RESPONSIVE
 ========================================= */
-
 @media (max-width: 768px) {
+    header {
+        padding: 2px 0 !important;
+    }
 
     header .container.nav {
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        gap: 8px;
-        padding: 8px 10px;
+        min-height: auto !important;
+        padding: 3px 0 !important;
     }
 
     header .logo img {
-        max-width: 95px;
-        max-height: 48px;
-        object-fit: contain;
-    }
-
-    header nav {
-        flex: 1 1 0;
-        min-width: 0;
-        overflow: hidden;
+        max-height: 35px !important;
     }
 
     header nav ul {
-        flex-wrap: nowrap !important;
-        justify-content: flex-start;
-        gap: 10px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    header nav ul::-webkit-scrollbar {
-        display: none;
-    }
-
-    header nav ul li {
-        flex: 0 0 auto;
-    }
-
-    header nav ul li a {
-        font-size: 12px;
-        white-space: nowrap;
-    }
-
-    header nav .btn {
-        padding: 7px 9px;
-    }
-
-    /* Insurance links remain in one horizontal row */
-    .insurance-quick-links {
-        justify-content: flex-start;
-        gap: 14px;
-        padding: 10px;
-        overflow-x: auto;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .insurance-quick-links::-webkit-scrollbar {
-        display: none;
-    }
-
-    .insurance-quick-links .insurance-section {
-        gap: 5px;
-    }
-
-    .insurance-quick-links .insurance-name {
-        font-size: 12px;
-    }
-
-    .insurance-quick-links .insurance-actions a {
-        font-size: 11px;
+        gap: 8px !important;
+        margin: 3px 0 !important;
     }
 }
-
 /* =========================================
    SMALL MOBILE
 ========================================= */
