@@ -1822,3 +1822,219 @@ footer {
     }
  
 }
+
+/* =========================================
+   FIXED HEADER - DESKTOP AND MOBILE
+========================================= */
+
+header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99999;
+    background: #fff;
+}
+
+header .container.nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .logo {
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+header .logo img {
+    display: block;
+    max-width: 190px;
+    height: auto;
+}
+
+header nav {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+header nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* =========================================
+   INSURANCE LINKS - NOT FIXED
+========================================= */
+
+.insurance-quick-links {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 12px 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #fff;
+    z-index: 1;
+}
+
+.insurance-quick-links .insurance-section {
+    flex: 0 0 auto;
+    width: auto !important;
+    min-width: max-content;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.insurance-quick-links .insurance-name {
+    white-space: nowrap;
+}
+
+.insurance-quick-links .insurance-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header .container.nav {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    header .logo img {
+        max-width: 95px;
+        max-height: 48px;
+        object-fit: contain;
+    }
+
+    header nav {
+        flex: 1 1 0;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    header nav ul {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start;
+        gap: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    header nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    header nav ul li {
+        flex: 0 0 auto;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    header nav .btn {
+        padding: 7px 9px;
+    }
+
+    /* Insurance links remain in one horizontal row */
+    .insurance-quick-links {
+        justify-content: flex-start;
+        gap: 14px;
+        padding: 10px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .insurance-quick-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .insurance-quick-links .insurance-section {
+        gap: 5px;
+    }
+
+    .insurance-quick-links .insurance-name {
+        font-size: 12px;
+    }
+
+    .insurance-quick-links .insurance-actions a {
+        font-size: 11px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    header .container.nav {
+        gap: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    header .logo img {
+        max-width: 78px;
+        max-height: 42px;
+    }
+
+    header nav ul {
+        gap: 8px;
+    }
+
+    header nav ul li a {
+        font-size: 11px;
+    }
+
+    header nav .btn {
+        padding: 6px 7px;
+    }
+
+    .insurance-quick-links {
+        gap: 12px;
+    }
+}
