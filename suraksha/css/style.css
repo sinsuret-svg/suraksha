@@ -2107,3 +2107,8 @@ header nav {
 @media (hover: hover) and (pointer: fine) { .insurance-section:hover .insurance-actions { display: flex !important; } }
 .insurance-section.active .insurance-actions { display: flex !important; }
 
+
+/* FINAL INSURANCE HOVER FIX */
+.insurance-quick-links .insurance-actions { position: static !important; top: auto !important; left: auto !important; transform: none !important; padding-top: 0 !important; margin-top: 4px; }
+@media (hover: hover) and (pointer: fine) { .insurance-quick-links { overflow: visible !important; } .insurance-quick-links .insurance-section:hover .insurance-actions { display: flex !important; } }
+.insurance-quick-links .insurance-section.active .insurance-actions { display: flex !important; }
