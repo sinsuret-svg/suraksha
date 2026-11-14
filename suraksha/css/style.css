@@ -1844,7 +1844,7 @@ header .container.nav {
 }
 
 header .logo img {
-    max-height: 40px !important;
+    max-height: 100px !important;
     width: auto;
     object-fit: contain;
 }
