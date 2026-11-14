@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    GLOBAL RESET
 ========================================================= */
 
@@ -1481,7 +1481,7 @@ footer {
        Comes AFTER NAVIGATION
     ----------------------------------------- */
 
-    .insurance-quick-links {
+   .insurance-quick-links {
         order: 3;
 
         width: 100%;
@@ -1625,7 +1625,7 @@ footer {
         height: 31px;
     }
 
-    .insurance-quick-links {
+   .insurance-quick-links {
         gap: 10px;
     }
 
@@ -1723,7 +1723,7 @@ footer {
         font-size: 13px;
     }
 
-    .insurance-quick-links {
+   .insurance-quick-links {
         gap: 8px;
     }
 
@@ -1790,7 +1790,7 @@ footer {
         font-size: 12px;
     }
 
-    .insurance-quick-links {
+   .insurance-quick-links {
         gap: 5px;
     }
 
@@ -1888,7 +1888,7 @@ header nav {
 
     padding: 12px 15px;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
     background: #fff;
     z-index: 1;
 }
@@ -1909,7 +1909,7 @@ header nav {
 }
 
 .insurance-quick-links .insurance-actions {
-    display: flex !important;
+    display: none !important;
     flex-direction: row !important;
     align-items: center;
     gap: 6px;
@@ -2059,7 +2059,7 @@ header nav {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .insurance-quick-links {
+   .insurance-quick-links {
         justify-content: flex-start !important;
         gap: 8px;
     }
@@ -2100,5 +2100,10 @@ header nav {
 
 /* Show Plans and Quote on hover */
 .insurance-section:hover .insurance-actions {
-    display: flex;
+    display: flex !important;
 }
+
+
+@media (hover: hover) and (pointer: fine) { .insurance-section:hover .insurance-actions { display: flex !important; } }
+.insurance-section.active .insurance-actions { display: flex !important; }
+
