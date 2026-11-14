@@ -2080,3 +2080,25 @@ header nav {
         flex-basis: 120px !important;
     }
 }
+
+/* Hide Plans and Quote */
+.insurance-section {
+    position: relative;
+}
+
+.insurance-actions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 10px;
+    gap: 8px;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+/* Show Plans and Quote on hover */
+.insurance-section:hover .insurance-actions {
+    display: flex;
+}
